@@ -2,7 +2,9 @@
 
 Welcome to this Proof Of Concept (POC) app for [Pikwy](https://pikwy.com/).
 
-Before running this application you need an API TOKEN from Pikwy.
+See a full walkthrough of the app here: [https://community.canva.dev/t/introducing-canva-create-app-cli/3129/13?u=chris](https://community.canva.dev/t/introducing-canva-create-app-cli/3129/13?u=chris)
+
+Before running this application you need an API TOKEN from Pikwy (don't worry, it's free!)
 
 Get your [Free 7 days trial of Pikwy](https://pikwy.com/signup), with 100 free screenshots included.
 
@@ -16,7 +18,7 @@ FYI this POC only scratches the surface of the [Pikwy API](https://pikwy.com/api
 
 I created this POC to explore [Canva Apps](https://www.canva.dev/docs/apps/) and the new [App Templates](https://community.canva.dev/t/introducing-canva-create-app-cli/3129) functionality (I used the Generative AI template as the foundation).
 
-See my feedback/notes/screenshots from creating this app over in the [Canva Developers Community](https://community.canva.dev/t/introducing-canva-create-app-cli/3129).
+See my feedback & notes from creating this app over in the [Canva Developers Community](https://community.canva.dev/t/introducing-canva-create-app-cli/3129).
 
 Please feel free to fork this project and make it your own! 🎉
 
