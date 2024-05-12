@@ -4,9 +4,11 @@ Welcome to this Proof Of Concept (POC) app for [Pikwy](https://pikwy.com/).
 
 See a full walkthrough of the app here: [https://community.canva.dev/t/introducing-canva-create-app-cli/3129/13?u=chris](https://community.canva.dev/t/introducing-canva-create-app-cli/3129/13?u=chris)
 
+![image](https://github.com/chrisjacob/pikwy-poc/assets/157879/191cd31e-ae71-4506-9316-56bc1ba89c9a)
+
 Before running this application you need an API TOKEN from Pikwy (don't worry, it's free!)
 
-Get your [Free 7 days trial of Pikwy](https://pikwy.com/signup), with 100 free screenshots included.
+Get your [Free 7 day trial of Pikwy](https://pikwy.com/signup), with 100 free screenshots included (no credit card required).
 
 Once logged in to Pikwy copy your API TOKEN from the [Access Tokens](https://pikwy.com/tokens) page.
 
