@@ -5,7 +5,7 @@ import { useAppContext } from "src/context";
 import { AppMessages as Messages } from "src/app.messages";
 
 // @TODO: Replace this URL with your custom upselling link.
-const PURCHASE_URL = "https://example.com";
+const PURCHASE_URL = "https://pikwy.com/pricing";
 
 export const RemainingCredits = (): JSX.Element | undefined => {
   const { remainingCredits, loadingApp } = useAppContext();
@@ -43,7 +43,7 @@ export const RemainingCredits = (): JSX.Element | undefined => {
           requestOpenExternalUrl={() => openExternalUrl(PURCHASE_URL)}
           title="Purchase credits"
         >
-          example.com
+          pikwy.com
         </Link>
       </Text>
     </Rows>

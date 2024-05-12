@@ -3,7 +3,6 @@ import {
   AppError,
   ImageGrid,
   LoadingResults,
-  PromptInput,
   ReportBox,
 } from "src/components";
 import { useAppContext } from "src/context";
@@ -23,7 +22,6 @@ export const ResultsPage = () => {
       <AppError />
       <Rows spacing="2u">
         <ImageGrid />
-        <PromptInput />
         <ReportBox />
       </Rows>
     </Rows>

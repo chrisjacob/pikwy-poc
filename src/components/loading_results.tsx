@@ -133,14 +133,14 @@ export const LoadingResults = ({
     <Rows spacing="2u">
       <Box paddingTop="4u">
         {/** Wrapping this grid in a box with paddingTop so that the placeholders render at the same point as the generated images. */}
-        <Grid columns={2} spacing="2u">
-          {Array.from({ length: 4 }, (_, index) => (
+        <Grid columns={1} spacing="2u">
+          {Array.from({ length: 1 }, (_, index) => (
             <Placeholder shape="square" key={index} />
           ))}
         </Grid>
       </Box>
       <Text size="large" alignment="center">
-        {Parser(Messages.loadingMessage(promptInput))}
+        {Parser(Messages.loadingMessage(promptInput.length > 63 ? promptInput.substring(0, 60) + "..." : promptInput))}
       </Text>
       <ProgressBar
         value={Math.min(progress, 100)}

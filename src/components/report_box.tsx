@@ -27,11 +27,11 @@ export const ReportBox = (): JSX.Element => {
             <Link
               href={REPORT_URL}
               requestOpenExternalUrl={() => openExternalUrl(REPORT_URL)}
-              title="AI Product Terms"
+              title="Report content"
             >
-              report these images
+              report this image
             </Link>{" "}
-            if they don’t seem right.
+            if it doesn't seem right.
           </Text>
         </Column>
       </Columns>

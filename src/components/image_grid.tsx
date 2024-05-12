@@ -7,7 +7,7 @@ import { useAppContext } from "src/context";
 import { AppMessages as Messages } from "src/app.messages";
 import styles from "styles/utils.css";
 
-const THUMBNAIL_HEIGHT = 150;
+const THUMBNAIL_HEIGHT = 300;
 
 const uploadImage = async (image: ImageType): Promise<QueuedImage> => {
   // Upload the image using @canva/asset.
@@ -66,7 +66,7 @@ export const ImageGrid = () => {
       <Text size="medium" variant="bold">
         {Messages.addToDesign()}
       </Text>
-      <Grid columns={2} spacing="2u">
+      <Grid columns={1} spacing="2u">
         {generatedImages.map((image, index) => (
           <ImageCard
             key={index}

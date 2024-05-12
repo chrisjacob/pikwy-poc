@@ -12,34 +12,17 @@ import { Paths } from "src/routes";
 import { AppMessages as Messages } from "src/app.messages";
 
 // @TODO: Adjust according to your specific requirements.
-const MAX_INPUT_LENGTH = 280;
-const MIN_INPUT_ROWS = 3;
+const MAX_INPUT_LENGTH = 8000;
+const MIN_INPUT_ROWS = 5;
 
 /**
  * Array of example prompts that could be used to generate interesting pictures with an AI.
  * Consider fetching these prompts from a server or API call for dynamic and varied content.
  */
 const examplePrompts: string[] = [
-  "Cats ruling a parallel universe",
-  "Futuristic city with friendly robots",
-  "Magical forest with unicorns and dragons",
-  "Underwater kingdom with colorful fish and mermaids",
-  "World with altered gravity and flying people",
-  "Alien landscape with strange creatures",
-  "Steampunk adventure on a giant airship",
-  "Whimsical tea party with talking animals",
-  "Cyberpunk cityscape with neon lights",
-  "Post-apocalyptic world reclaimed by nature",
-  "Magical library where books come to life",
-  "Space station orbiting a distant planet",
-  "Time-traveling adventure through historical eras",
-  "Enchanted garden where flowers sing and dance",
-  "Fantasy castle floating among clouds",
-  "Fairytale scene with magical objects",
-  "Cosmic journey through distant galaxies",
-  "World where every day is Halloween",
-  "Futuristic sports arena with cyborgs",
-  "Scene inspired by a classic myth or legend",
+  "https://www.wikipedia.org/",
+  "https://www.tradingview.com/symbols/NASDAQ-AAPL/",
+  "https://time.is/",
 ];
 
 /**

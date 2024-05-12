@@ -22,6 +22,14 @@ export interface AppContextType {
   setPromptInput: (value: string) => void;
   promptInputError: string;
   setPromptInputError: (value: string) => void;
+  widthInput: string;
+  setWidthInput: (value: string) => void;
+  widthInputError: string;
+  setWidthInputError: (value: string) => void;
+  heightInput: string;
+  setHeightInput: (value: string) => void;
+  heightInputError: string;
+  setHeightInputError: (value: string) => void;
   generatedImages: ImageType[];
   setGeneratedImages: (value: ImageType[]) => void;
 }
@@ -45,6 +53,14 @@ export const AppContext = createContext<AppContextType>({
   setPromptInput: () => {},
   promptInputError: "",
   setPromptInputError: () => {},
+  widthInput: "",
+  setWidthInput: () => {},
+  widthInputError: "",
+  setWidthInputError: () => {},
+  heightInput: "",
+  setHeightInput: () => {},
+  heightInputError: "",
+  setHeightInputError: () => {},
   generatedImages: [] as ImageType[],
   setGeneratedImages: () => {},
 });
@@ -73,6 +89,10 @@ export const ContextProvider = ({
   const [remainingCredits, setRemainingCredits] = useState<number>(0);
   const [promptInput, setPromptInput] = useState<string>("");
   const [promptInputError, setPromptInputError] = useState<string>("");
+  const [widthInput, setWidthInput] = useState<string>("");
+  const [widthInputError, setWidthInputError] = useState<string>("");
+  const [heightInput, setHeightInput] = useState<string>("");
+  const [heightInputError, setHeightInputError] = useState<string>("");
   const [generatedImages, setGeneratedImages] = useState<ImageType[]>([]);
   const [creditsError, setCreditsError] = useState<string>("");
 
@@ -138,6 +158,28 @@ export const ContextProvider = ({
     setPromptInput(value);
   };
 
+  const setWidthInputHandler = (value: string) => {
+    if (widthInputError === Messages.widthMissingErrorMessage()) {
+      setWidthInputError("");
+    }
+    if (value === "") {
+      setWidthInputError("");
+    }
+
+    setWidthInput(value);
+  };
+
+  const setHeightInputHandler = (value: string) => {
+    if (heightInputError === Messages.heightMissingErrorMessage()) {
+      setHeightInputError("");
+    }
+    if (value === "") {
+      setHeightInputError("");
+    }
+
+    setHeightInput(value);
+  };
+
   const value: AppContextType = {
     loggedInState,
     setLoggedInState,
@@ -157,6 +199,14 @@ export const ContextProvider = ({
     setPromptInput: setPromptInputHandler,
     promptInputError,
     setPromptInputError,
+    widthInput,
+    setWidthInput: setWidthInputHandler,
+    widthInputError,
+    setWidthInputError,
+    heightInput,
+    setHeightInput: setHeightInputHandler,
+    heightInputError,
+    setHeightInputError,
     generatedImages,
     setGeneratedImages,
   };

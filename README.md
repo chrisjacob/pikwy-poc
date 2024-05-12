@@ -1,3 +1,28 @@
+# Pikwy POC Canva App: Capture Screenshots in Canva!
+
+Welcome to this Proof Of Concept (POC) app for [Pikwy](https://pikwy.com/).
+
+Before running this application you need an API TOKEN from Pikwy.
+
+Get your [Free 7 days trial of Pikwy](https://pikwy.com/signup), with 100 free screenshots included.
+
+Once logged in to Pikwy copy your API TOKEN from the [Access Tokens](https://pikwy.com/tokens) page.
+
+Then in this code repository, edit the file `\backend\routers\image.ts`, replacing `?token=125` with `?token=YOUR_API_TOKEN` and save the file.
+
+Then proceed with the steps below to start your local server, create/install this App in Canva, and enjoy taking screenshots!
+
+FYI this POC only scratches the surface of the [Pikwy API](https://pikwy.com/api) for taking screenshots (only URL, Width and Height are configurable so far).
+
+I created this POC to explore [Canva Apps](https://www.canva.dev/docs/apps/) and the new [App Templates](https://community.canva.dev/t/introducing-canva-create-app-cli/3129) functionality (I used the Generative AI template as the foundation).
+
+See my feedback/notes/screenshots from creating this app over in the [Canva Developers Community](https://community.canva.dev/t/introducing-canva-create-app-cli/3129).
+
+Please feel free to fork this project and make it your own! 🎉
+
+Cheers,
+Chris
+
 # Canva App
 
 Welcome to your Canva App! 🎉

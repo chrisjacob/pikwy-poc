@@ -20,6 +20,12 @@ export const Footer = () => {
     promptInput,
     setPromptInput,
     setPromptInputError,
+    widthInput,
+    setWidthInput,
+    setWidthInputError,
+    heightInput,
+    setHeightInput,
+    setHeightInputError,
     loadingApp,
     isLoadingImages,
     setJobId,
@@ -46,6 +52,22 @@ export const Footer = () => {
     return true;
   };
 
+  // const isWidthInputFilled = () => {
+  //   if (!widthInput) {
+  //     setWidthInputError(Messages.widthMissingErrorMessage());
+  //     return false;
+  //   }
+  //   return true;
+  // };
+
+  // const isHeightInputFilled = () => {
+  //   if (!heightInput) {
+  //     setHeightInputError(Messages.heightMissingErrorMessage());
+  //     return false;
+  //   }
+  //   return true;
+  // };
+
   const isPromptInputClean = () => {
     const obsceneWords = getObsceneWords(promptInput);
     if (obsceneWords.length > 0) {
@@ -59,6 +81,8 @@ export const Footer = () => {
     if (
       !isCreditRemaining() ||
       !isPromptInputFilled() ||
+      // !isWidthInputFilled() ||
+      // !isHeightInputFilled() ||
       !isPromptInputClean()
     ) {
       return;
@@ -68,6 +92,8 @@ export const Footer = () => {
     try {
       const { jobId } = await queueImageGeneration({
         prompt: promptInput,
+        width: widthInput,
+        height: heightInput,
         numberOfImages: NUMBER_OF_IMAGES_TO_GENERATE,
       });
 

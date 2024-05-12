@@ -63,19 +63,27 @@ const endpoints = {
  * queues image generation based on the provided prompt and number of images.
  * @param {Object} options - The options for generating images.
  * @param {string} options.prompt - The prompt for generating images.
+ * @param {string} options.width - The width for generating images.
+ * @param {string} options.height - The height for generating images.
  * @param {number} options.numberOfImages - The number of images to generate.
  * @returns {Promise<QueueImageGenerationResponse>} A promise that resolves to the created job ID.
  */
 export const queueImageGeneration = async ({
   prompt,
+  width,
+  height,
   numberOfImages,
 }: {
   prompt: string;
+  width: number;
+  height: number;
   numberOfImages: number;
 }): Promise<QueueImageGenerationResponse> => {
   const url = new URL(endpoints.queueImageGeneration, BACKEND_HOST);
   url.searchParams.append("count", numberOfImages.toString());
   url.searchParams.append("prompt", prompt);
+  url.searchParams.append("width", width);
+  url.searchParams.append("height", height);
 
   const result: QueueImageGenerationResponse = await sendRequest(url);
 
@@ -96,7 +104,7 @@ export const getImageGenerationJobStatus = async ({
   url.searchParams.append("jobId", jobId);
 
   // Define a maximum number of polling attempts
-  const maxAttempts = 10;
+  const maxAttempts = 60;
   let attempts = 0;
 
   while (attempts < maxAttempts) {
@@ -104,6 +112,7 @@ export const getImageGenerationJobStatus = async ({
       const response = (await sendRequest(
         url
       )) as ImageGenerationJobStatusResponse;
+
       if (response.status === "completed") {
         return { images: response.images, credits: response.credits };
       } else if (response.status === "processing") {
